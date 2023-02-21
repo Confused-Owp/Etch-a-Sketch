@@ -10,7 +10,9 @@
 }
 
 #tools{
-	grid-row: 2/3;
+display: flex;
+justify-content: center;
+gap: 10px;
 
 }
 
