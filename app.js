@@ -1,3 +1,4 @@
+const cell  =  document.getElementsByClassName("grid-item");
 const container = document.getElementById("container");
 
 function makeRows(rows, cols) {
@@ -8,5 +9,10 @@ function makeRows(rows, cols) {
     container.appendChild(cell).className = "grid-item";
   };
 };
+
+  // cell.addEventListener("mousedown",function(){
+  //   cell.classList.add("my-class");
+  // })
+
 
 makeRows(16, 16);
