@@ -35,3 +35,7 @@ gap: 30px;
 .grid-item {
     border: 1px solid #ddd;
   }
+
+  .my-class {
+    background-color: black;
+  }
