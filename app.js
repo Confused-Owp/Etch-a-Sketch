@@ -10,9 +10,10 @@ function makeRows(rows, cols) {
   };
 };
 
-  // cell.addEventListener("mousedown",function(){
-  //   cell.classList.add("my-class");
-  // })
+  container.addEventListener("mousedown",function(){
+    console.log(event.target)
+    event.target.classList.add("my-class");
+   })
 
 
 makeRows(16, 16);
