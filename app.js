@@ -5,7 +5,7 @@ const paintBrush = document.querySelector('#paint-brush')
 const lighter= document.querySelector('#lighter')
 const darker = document.querySelector('#darker')
 const eraser = document.querySelector('#eraser')
-const colorPalette = document.querySelector('#color-palette')
+const colorPicker = document.querySelector('#color-picker')
 const rainbow = document.querySelector('#rainbow')
 
 //function to make rows (!!needs editing)
@@ -31,14 +31,28 @@ function mousemoveHandler(event) {
   event.target.classList.add("my-class");
 }
 
+//function for toolsbar
 tools.addEventListener('click', function(event){
   const button = event.target
-  console.log(button)
+  
   if (button == paintBrush){
     console.log('you painting?')
   }
+  if (button == lighter){
+    console.log('you lighting?')
+  }
+  if (button == darker){
+    console.log('you darking?')
+  }
+  if (button == eraser){
+    console.log('you erasing?')
+  }
+  if (button == colorPicker){
+    console.log('you picking?')
+  }
+  if (button == rainbow){
+    console.log('you rainbowing?')
+  }
   button.classList.add("blue")
-
-  
 })
 makeRows(16, 16);
