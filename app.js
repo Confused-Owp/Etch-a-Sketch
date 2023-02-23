@@ -1,9 +1,12 @@
 const cell  =  document.getElementsByClassName("grid-item");
 const container = document.getElementById("container");
 const tools = document.getElementById("tools");
-
-console.log(tools)
-
+const paintBrush = document.querySelector('#paint-brush')
+const lighter= document.querySelector('#lighter')
+const darker = document.querySelector('#darker')
+const eraser = document.querySelector('#eraser')
+const colorPalette = document.querySelector('#color-palette')
+const rainbow = document.querySelector('#rainbow')
 
 //function to make rows (!!needs editing)
 function makeRows(rows, cols) {
@@ -25,13 +28,17 @@ container.addEventListener("mousedown", function(event) {
 });
 
 function mousemoveHandler(event) {
-
   event.target.classList.add("my-class");
 }
 
 tools.addEventListener('click', function(event){
-  console.log('you clicked it')
-  event.target.classList.add("blue")
+  const button = event.target
+  console.log(button)
+  if (button == paintBrush){
+    console.log('you painting?')
+  }
+  button.classList.add("blue")
+
   
 })
 makeRows(16, 16);
