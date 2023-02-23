@@ -1,6 +1,11 @@
 const cell  =  document.getElementsByClassName("grid-item");
 const container = document.getElementById("container");
+const tools = document.getElementById("tools");
 
+console.log(tools)
+
+
+//function to make rows (!!needs editing)
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -10,6 +15,7 @@ function makeRows(rows, cols) {
   };
 };
 
+// function for drawing
 container.addEventListener("mousedown", function(event) {
   event.target.classList.add("my-class");
   container.addEventListener("mousemove", mousemoveHandler);
@@ -22,4 +28,10 @@ function mousemoveHandler(event) {
 
   event.target.classList.add("my-class");
 }
+
+tools.addEventListener('click', function(event){
+  console.log('you clicked it')
+  event.target.classList.add("blue")
+  
+})
 makeRows(16, 16);
