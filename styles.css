@@ -1,11 +1,9 @@
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
+  --paint: black;
   }
 
-#title{
-
-}
 
 #tools{
 display: flex;
@@ -38,7 +36,7 @@ font-size: 30px;
   }
 
   .my-class {
-    background-color: black;
+    background-color: var(--paint);
   }
   .blue{
     color: blue;
