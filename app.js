@@ -33,8 +33,8 @@ function mousemoveHandler(event) {
 
 var randomColor = '#000000'
 function rainbowColor(){
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
-  console.log("#" + randomColor)
+  randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  console.log(randomColor)
 };
 
 //function for toolsbar
@@ -58,7 +58,7 @@ tools.addEventListener('click', function(event){
   }
   if (button == rainbow){
     rainbowColor()
-    //event.target.style.setProperty('--paint', "#" + randomColor);
+    event.target.style.setProperty('--paint', rainbowColor());
     
     console.log('you rainbowing?')
   }
