@@ -31,6 +31,12 @@ function mousemoveHandler(event) {
   event.target.classList.add("my-class");
 }
 
+var randomColor = '#000000'
+function rainbowColor(){
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  console.log("#" + randomColor)
+};
+
 //function for toolsbar
 tools.addEventListener('click', function(event){
   const button = event.target
@@ -51,6 +57,9 @@ tools.addEventListener('click', function(event){
     console.log('you picking?')
   }
   if (button == rainbow){
+    rainbowColor()
+    //event.target.style.setProperty('--paint', "#" + randomColor);
+    
     console.log('you rainbowing?')
   }
   button.classList.add("blue")
