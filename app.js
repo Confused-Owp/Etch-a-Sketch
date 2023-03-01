@@ -35,7 +35,10 @@ var randomColor = '#000000'
 function rainbowColor(){
   randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
   container.style.setProperty('--paint', randomColor);
-  console.log(randomColor)
+};
+function erasing(){
+  randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  container.style.setProperty('--paint', "white");
 };
 
 //function for toolsbar
@@ -53,6 +56,7 @@ tools.addEventListener('click', function(event){
   }
   if (button == eraser){
     console.log('you erasing?')
+    erasing()
   }
   if (button == colorPicker){
     console.log('you picking?')
