@@ -34,6 +34,7 @@ function mousemoveHandler(event) {
 var randomColor = '#000000'
 function rainbowColor(){
   randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  container.style.setProperty('--paint', randomColor);
   console.log(randomColor)
 };
 
@@ -58,7 +59,7 @@ tools.addEventListener('click', function(event){
   }
   if (button == rainbow){
     rainbowColor()
-    event.target.style.setProperty('--paint', rainbowColor());
+   
     
     console.log('you rainbowing?')
   }
