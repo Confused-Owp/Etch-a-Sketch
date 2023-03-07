@@ -7,7 +7,9 @@ const darker = document.querySelector('#darker')
 const eraser = document.querySelector('#eraser')
 const colorPicker = document.querySelector('#color-picker')
 const rainbow = document.querySelector('#rainbow')
-
+const range = document.querySelector('#input')
+var rows = 16
+var cols = 16
 //function to make rows (!!needs editing)
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -63,10 +65,15 @@ tools.addEventListener('click', function(event){
   }
   if (button == rainbow){
     rainbowColor()
-   
+    
     
     console.log('you rainbowing?')
   }
   button.classList.add("blue")
 })
-makeRows(16, 16);
+
+input.addEventListener("input", (event) => {
+  rows = event.target.value
+  cols = event.target.value
+})
+ makeRows(rows,cols);
