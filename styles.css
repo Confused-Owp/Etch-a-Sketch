@@ -9,6 +9,14 @@
     grid-row: 2/3;
     margin-left: auto;
   }
+  #display-size {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+  }
   
 
 
