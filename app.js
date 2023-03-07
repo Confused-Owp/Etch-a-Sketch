@@ -8,6 +8,7 @@ const eraser = document.querySelector('#eraser')
 const colorPicker = document.querySelector('#color-picker')
 const rainbow = document.querySelector('#rainbow')
 const range = document.querySelector('#input')
+const displaySize = document.querySelector('#display-size')
 var rows = 16
 var cols = 16
 //function to make rows (!!needs editing)
@@ -77,5 +78,7 @@ input.addEventListener("input", (event) => {
   cols = event.target.value
   container.innerHTML = ""
   makeRows(rows,cols);
+  displaySize.textContent = `${rows} x ${cols}`
 })
 makeRows(rows,cols);
+displaySize.textContent = `${rows} x ${cols}`
