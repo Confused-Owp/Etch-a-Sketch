@@ -7,14 +7,14 @@
     appearance: slider-vertical;
     grid-column: 1/2;
     grid-row: 2/3;
-    justify-content: center;
+    margin-left: auto;
   }
   
 
 
 #tools{
-  grid-column: 2/3;
-    grid-row: 1/2;
+grid-column: 2/3;
+grid-row: 1/2;
 display: flex;
 justify-content: center;
 gap: 30px;
