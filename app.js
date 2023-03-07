@@ -75,5 +75,6 @@ tools.addEventListener('click', function(event){
 input.addEventListener("input", (event) => {
   rows = event.target.value
   cols = event.target.value
+  container.innerHTML = ""
+  makeRows(rows,cols);
 })
- makeRows(rows,cols);
