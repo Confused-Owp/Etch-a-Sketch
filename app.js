@@ -78,3 +78,4 @@ input.addEventListener("input", (event) => {
   container.innerHTML = ""
   makeRows(rows,cols);
 })
+makeRows(rows,cols);
